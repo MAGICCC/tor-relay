@@ -1,0 +1,10 @@
+services:
+  tor-relay:
+    #build: .
+    image: magic848/tor-relay:latest
+    restart: always
+    volumes:
+    - ./tor:/etc/tor
+    - /etc/sysctl.conf:/etc/sysctl.conf
+    ports:
+    - 9001:9001
